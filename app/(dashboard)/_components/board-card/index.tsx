@@ -1,9 +1,11 @@
 "use client";
 
-import Image from "next/image";
 import Link from "next/link";
-import { formatDistanceToNow } from "date-fns";
+import Image from "next/image";
 import { useAuth } from "@clerk/nextjs";
+import { formatDistanceToNow } from "date-fns";
+
+import { Skeleton } from "@/components/ui/skeleton";
 
 import { Overlay } from "./overlay";
 import { Footer } from "./footer";
@@ -53,5 +55,13 @@ export const BoardCard = ({
         />
       </div>
     </Link>
+  );
+};
+
+BoardCard.Skeleton = function BoardCardSkeleton() {
+  return (
+    <div className="aspect-[100/127] rounded-lg overflow-hidden">
+      <Skeleton className="h-full" />
+    </div>
   );
 };
