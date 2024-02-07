@@ -2,7 +2,7 @@
 
 import Image from "next/image";
 import { toast } from "sonner";
-import { useRouter } from "next/router";
+import { useRouter } from "next/navigation";
 import { useOrganization } from "@clerk/nextjs";
 
 import { api } from "@/convex/_generated/api";
@@ -25,7 +25,7 @@ export const EmptyBoard = () => {
     })
       .then((id) => {
         toast.success("Board created");
-        router.push(`/boards/${id}`);
+        router.push(`/board/${id}`);
       })
       .catch(() => toast.error("Failed to create board."));
   };
