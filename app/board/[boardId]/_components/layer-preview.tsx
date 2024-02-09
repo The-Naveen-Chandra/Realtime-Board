@@ -32,7 +32,7 @@ export const LayerPreview = memo(
         );
 
       default:
-        console.log("Unknow layer type");
+        console.log("Unknown layer type");
         return null;
     }
   }
