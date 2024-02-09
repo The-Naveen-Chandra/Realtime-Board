@@ -16,6 +16,8 @@ import { Participants } from "./participants";
 import { Toolbar } from "./toolbar";
 import { CursorsPresence } from "./cursors-presence";
 
+const MAX_LAYERS = 100;
+
 interface CanvasProps {
   boardId: string;
 }
@@ -71,7 +73,11 @@ export const Canvas = ({ boardId }: CanvasProps) => {
         onPointerMove={onPointerMove}
         onPointerLeave={onPointerLeave}
       >
-        <g>
+        <g
+          style={{
+            transform: `translate(${camera.x}px, ${camera.y}px)`,
+          }}
+        >
           <CursorsPresence />
         </g>
       </svg>
