@@ -9,6 +9,7 @@ export const Loading = () => {
         width={120}
         height={120}
         className="animate-pulse duration-1000"
+        priority
       />
       <h1 className="flex items-center justify-center font-bold text-2xl my-3 animate-pulse duration-1000">
         Realtime-Board

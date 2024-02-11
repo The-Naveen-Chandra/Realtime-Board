@@ -48,6 +48,7 @@ export const Info = ({ boardId }: InfoProps) => {
               alt="Realtime-Board Logo"
               height={40}
               width={40}
+              priority
             />
             <span
               className={cn(
